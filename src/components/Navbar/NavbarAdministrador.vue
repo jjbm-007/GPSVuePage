@@ -29,13 +29,28 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
                 <router-link
+                  to="asignatura-administrador"
+                  class="dropdown-item"
+                  href="#"
+                  ><i class="fas fa-file-signature mr"></i>Asignaturas</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="carreras-administrador"
+                  class="dropdown-item"
+                  href="#"
+                  ><i class="fas fa-university mr"></i> Carreras</router-link
+                >
+              </li>
+              <li>
+                <router-link
                   to="division-academica-administrador"
                   class="dropdown-item"
                   href="#"
-                  ><i class="fas fa-building mr"></i>Asignaturas</router-link
+                  ><i class="fas fa-building mr"></i>Divisiones</router-link
                 >
               </li>
-              <li><a class="dropdown-item" href="#">Carreras</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Directores</a></li>
               <li><a class="dropdown-item" href="#">Docentes</a></li>

@@ -4,20 +4,14 @@
     <div class="row mt-5">
     <div class="col-sm-6">
       <div class="mb-2">
-        <label for="divisionName" class="form-label">Nombre de la división</label>
+        <label for="divisionName" class="form-label">Carrera</label>
         <input type="text" name="divisionName" class="form-control" />
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="mb-2">
-        <label for="siglasName" class="form-label">Siglas de la división</label>
-        <input type="text" name="siglasName" class="form-control" />
       </div>
     </div>
   </div>
 
   <div class="mt-4 text-center">
-    <router-link class="btn btn-danger mr" to="division-academica-administrador">
+    <router-link class="btn btn-danger mr" to="carreras-administrador">
       <i class="fas fa-times mr"></i>
       Cancelar
     </router-link>
