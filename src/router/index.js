@@ -7,9 +7,24 @@ const routes = [
     component: () => import('@/views/Login')
   },
   { 
-    path: '/dashboard',
-    name:"dashborad",
-    component: () => import('@/views/Dashboard')
+    path: '/registro',
+    name:"registro",
+    component: () => import('@/views/Registro')
+  },
+  { 
+    path: '',
+    name:"dashboradAdministrador",
+    component: () => import('@/views/Administrador/Dashboard'),
+    children: [
+      {
+        path: 'division-academica-administrador',
+        component: () => import('@/views/Administrador/DivisionAcademica/DivisionAcademica')
+      },
+      {
+        path: 'crear-division-academica-administrador',
+        component: () => import('@/views/Administrador/DivisionAcademica/Registrar')
+      },
+    ]
   }
 ]
 
