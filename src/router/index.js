@@ -21,17 +21,10 @@ const routes = [
         component: () => import('@/views/Administrador/DivisionAcademica/DivisionAcademica')
       },
       {
-        path: 'crear-division-academica-administrador',
-        component: () => import('@/views/Administrador/DivisionAcademica/Registrar')
-      },
-      {
         path: 'carreras-administrador',
         component: () => import('@/views/Administrador/Carrera/Carrera')
       },
-      {
-        path: 'crear-carrera-administrador',
-        component: () => import('@/views/Administrador/Carrera/Registrar')
-      },
+      
     ]
   }
 ]

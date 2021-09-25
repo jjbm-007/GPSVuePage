@@ -40,7 +40,7 @@
                   to="carreras-administrador"
                   class="dropdown-item"
                   href="#"
-                  ><i class="fas fa-university mr"></i> Carreras</router-link
+                  ><i class="fas fa-university mr"></i>Carreras</router-link
                 >
               </li>
               <li>
