@@ -11,7 +11,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>asd
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -24,22 +24,31 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Administrador
+              <i class="fas fa-user-cog mr"></i>Administrador
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <router-link to="director-administrador" class="dropdown-item"
+                  ><i class="fas fa-user-tie mr"></i>Directores</router-link 
+                >
+              </li>
+              <li>
+                <router-link to="docente-administrador" class="dropdown-item"
+                  ><i class="fas fa-chalkboard-teacher mr"></i>Docentes</router-link
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
               <li>
                 <router-link
                   to="asignatura-administrador"
                   class="dropdown-item"
-                  href="#"
-                  ><i class="fas fa-file-signature mr"></i>Asignaturas</router-link
+                  ><i class="fas fa-book mr"></i>Asignaturas</router-link
                 >
               </li>
               <li>
                 <router-link
                   to="carreras-administrador"
                   class="dropdown-item"
-                  href="#"
                   ><i class="fas fa-university mr"></i>Carreras</router-link
                 >
               </li>
@@ -47,13 +56,16 @@
                 <router-link
                   to="division-academica-administrador"
                   class="dropdown-item"
-                  href="#"
                   ><i class="fas fa-building mr"></i>Divisiones</router-link
                 >
               </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Directores</a></li>
-              <li><a class="dropdown-item" href="#">Docentes</a></li>
+              <li>
+                <router-link
+                  to="periodo-administrador"
+                  class="dropdown-item"
+                  ><i class="fas fa-external-link-square-alt mr"></i>Periodo</router-link
+                >
+              </li>
             </ul>
           </li>
           <!--
@@ -72,3 +84,9 @@
     </div>
   </nav>
 </template>
+
+<style scoped>
+  .btn.btn-outline-secondary:hover{
+    color: #FFFFFF;
+  }
+</style>

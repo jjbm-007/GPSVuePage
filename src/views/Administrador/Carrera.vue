@@ -1,15 +1,16 @@
 <template>
   <h3 class="text-center"><i class="fas fa-university mr"></i>Carreras</h3>
+  
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     <button
-      data-bs-toggle="modal"
-      data-bs-target="#modalRegistro"
+      @click="registrar()"
       class="btn btn-primary"
       type="button"
     >
       <i class="fas fa-pencil-alt mr"></i>Registrar carrera
     </button>
   </div>
+  
   <table class="table table-hover text-center mt-4">
     <thead>
       <tr>
@@ -24,42 +25,18 @@
         <td>Carrera 1</td>
         <td>
           <button
-            data-bs-toggle="modal"
-            data-bs-target="#modalModificar"
+            @click="modificar()"
             class="btn btn-outline-warning btn-sm mr"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom" 
+            title="Modificar"
             ><i class="fas fa-edit"></i
           ></button>
-          <button type="button" class="btn btn-outline-danger btn-sm">
-            <i class="fas fa-trash-alt"></i>
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Carrera 2</td>
-        <td>
-          <button
-            data-bs-toggle="modal"
-            data-bs-target="#modalModificar"
-            class="btn btn-outline-warning btn-sm mr"
-            ><i class="fas fa-edit"></i
-          ></button>
-          <button type="button" class="btn btn-outline-danger btn-sm">
-            <i class="fas fa-trash-alt"></i>
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Carrera 3</td>
-        <td>
-          <button
-            data-bs-toggle="modal"
-            data-bs-target="#modalModificar"
-            class="btn btn-outline-warning btn-sm mr"
-            ><i class="fas fa-edit"></i
-          ></button>
-          <button type="button" class="btn btn-outline-danger btn-sm">
+          <button type="button" 
+            class="btn btn-outline-danger btn-sm"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom" 
+            title="Eliminar">
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
@@ -70,7 +47,7 @@
   <!-- Modal Registro -->
   <div
     class="modal fade"
-    id="modalRegistro"
+    id="modalRegistrar"
     tabindex="-1"
     data-bs-backdrop="static"
     aria-labelledby="exampleModalLabel"
@@ -151,6 +128,22 @@
 </template>
 
 <script>
+export default {
+  mounted(){
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  },
+  methods:{
+    registrar(){
+      $("#modalRegistrar").modal("show");
+    },
+    modificar(){
+      $("#modalModificar").modal("show");
+    }
+  }
+}
 </script>
 
 <style>

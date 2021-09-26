@@ -18,13 +18,28 @@ const routes = [
     children: [
       {
         path: 'division-academica-administrador',
-        component: () => import('@/views/Administrador/DivisionAcademica/DivisionAcademica')
+        component: () => import('@/views/Administrador/DivisionAcademica')
       },
       {
         path: 'carreras-administrador',
-        component: () => import('@/views/Administrador/Carrera/Carrera')
+        component: () => import('@/views/Administrador/Carrera')
       },
-      
+      {
+        path: 'asignatura-administrador',
+        component: () => import('@/views/Administrador/Asignatura')
+      },
+      {
+        path: 'periodo-administrador',
+        component: () => import('@/views/Administrador/Periodo')
+      },
+      {
+        path: 'docente-administrador',
+        component: () => import('@/views/Administrador/Docente')
+      },
+      {
+        path: 'director-administrador',
+        component: () => import('@/views/Administrador/Director')
+      }
     ]
   }
 ]
