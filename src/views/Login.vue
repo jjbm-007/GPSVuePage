@@ -19,7 +19,7 @@
             <input type="password" class="form-control" name="password" placeholder="Ingresa tu contraseña" />
           </div>
           <div class="d-grid">
-            <router-link class="btn btn-primary" to="division-academica-administrador">
+            <router-link class="btn btn-primary" to="docente-director">
               <i class="fas fa-sign-in-alt mr"></i>
               Iniciar sesión
             </router-link>

@@ -41,6 +41,33 @@ const routes = [
         component: () => import('@/views/Administrador/Director')
       }
     ]
+  },
+  { 
+    path: '',
+    name:"dashboradDirector",
+    component: () => import('@/views/Director/Dashboard'),
+    children: [
+      {
+        path: 'docente-director',
+        component: () => import('@/views/Director/Docente')
+      },
+      {
+        path: 'pases-director',
+        component: () => import('@/views/Director/Pases')
+      },
+      {
+        path: 'perfil-director',
+        component: () => import('@/views/Director/Perfil')
+      },
+      {
+        path: 'justificantes-director',
+        component: () => import('@/views/Director/Justificantes')
+      },
+      {
+        path: 'historial-director',
+        component: () => import('@/views/Director/Historial')
+      },
+    ]
   }
 ]
 

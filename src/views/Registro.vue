@@ -133,7 +133,7 @@
                           data-bs-target="#carouselExampleControls"
                           data-bs-slide="next"
                           :value="1"
-                          @click="docenteCompleto()"
+                          @click="personalAcademico()"
                         >
                           <i class="fas fa-hand-pointer mr"></i>
                           Seleccionar
@@ -219,7 +219,7 @@
               </div>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-6" v-if="docente != 4">
               <div class="mb-2">
                 <label for="division" class="form-label"
                   >División académica</label
@@ -276,6 +276,9 @@ export default {
     docenteAsignatura() {
       this.docente = 3;
     },
+    personalAcademico(){
+      this.docente = 4;
+    }
   },
 };
 </script>
