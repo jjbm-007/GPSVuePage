@@ -24,46 +24,33 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fas fa-user-cog mr"></i>Administrador
+              <i class="fas fa-user-tie mr"></i>Director académico
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <router-link to="director-administrador" class="dropdown-item"
-                  ><i class="fas fa-user-tie mr"></i>Directores</router-link 
+                <router-link to="justificantes-director" class="dropdown-item"
+                  ><i class="fas fa-file-medical-alt mr"></i>Justificantes</router-link
                 >
               </li>
               <li>
-                <router-link to="docente-administrador" class="dropdown-item"
-                  ><i class="fas fa-chalkboard-teacher mr"></i>Docentes</router-link
+                <router-link to="pases-director" class="dropdown-item"
+                  ><i class="fas fa-ticket-alt mr"></i>Pases de salida</router-link
+                >
+              </li>
+              <li>
+                <router-link to="historial-director" class="dropdown-item"
+                  ><i class="fas fa-book-open mr"></i>Historial</router-link
+                >
+              </li>
+              <li>
+                <router-link to="docente-director" class="dropdown-item"
+                  ><i class="fas fa-chalkboard-teacher mr"></i>Mis colaboradores</router-link
                 >
               </li>
               <li><hr class="dropdown-divider" /></li>
-              <li>
-                <router-link
-                  to="asignatura-administrador"
-                  class="dropdown-item"
-                  ><i class="fas fa-book mr"></i>Asignaturas</router-link
-                >
-              </li>
-              <li>
-                <router-link
-                  to="carreras-administrador"
-                  class="dropdown-item"
-                  ><i class="fas fa-university mr"></i>Carreras</router-link
-                >
-              </li>
-              <li>
-                <router-link
-                  to="division-academica-administrador"
-                  class="dropdown-item"
-                  ><i class="fas fa-building mr"></i>Divisiones</router-link
-                >
-              </li>
-              <li>
-                <router-link
-                  to="periodo-administrador"
-                  class="dropdown-item"
-                  ><i class="fas fa-external-link-square-alt mr"></i>Periodo</router-link
+               <li>
+                <router-link to="perfil-director" class="dropdown-item"
+                  ><i class="fas fa-user-tie mr"></i>Mi perfil</router-link
                 >
               </li>
             </ul>

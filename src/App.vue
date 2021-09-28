@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style>
-
+  .btn.btn-outline-secondary:hover{
+    color: #FFFFFF !important;
+  }
+  .btn.btn-outline-info:hover{
+    color:#FFFFFF !important;
+  }
 </style>
