@@ -5,11 +5,7 @@
   </h3>
 
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <button
-      @click="registrar()"
-      class="btn btn-primary"
-      type="button"
-    >
+    <button @click="registrar()" class="btn btn-primary" type="button">
       <i class="fas fa-pencil-alt mr"></i>Registrar División Academica
     </button>
   </div>
@@ -24,32 +20,33 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
+      <tr v-for="(division, item) in divisions" :key="division.id">
+        <th scope="row">{{ item + 1 }}</th>
         <td>
-          División Académica de Tecnologías de la Información y Comunicación
+          {{ division.nombre }}
         </td>
-        <td>DATIC</td>
+        <td>{{ division.siglas }}</td>
         <td>
           <button
             @click="modificar()"
             class="btn btn-outline-warning btn-sm mr"
             data-bs-toggle="tooltip"
-            data-bs-placement="bottom" 
+            data-bs-placement="bottom"
             title="Modificar"
           >
             <i class="fas fa-edit"></i>
           </button>
-          <button type="button" 
+          <button
+            type="button"
             class="btn btn-outline-danger btn-sm"
             data-bs-toggle="tooltip"
-            data-bs-placement="bottom" 
-            title="Eliminar">
+            data-bs-placement="bottom"
+            title="Eliminar"
+          >
             <i class="fas fa-trash-alt"></i>
           </button>
         </td>
       </tr>
-      
     </tbody>
   </table>
 
@@ -165,7 +162,15 @@
 </template>
 
 <script>
+import api from "../../util/api";
+//import Vue from "vue";
+
 export default {
+  data() {
+    return {
+      divisions: [],
+    };
+  },
   mounted() {
     var tooltipTriggerList = [].slice.call(
       document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -174,7 +179,23 @@ export default {
       return new bootstrap.Tooltip(tooltipTriggerEl);
     });
   },
+  beforeMount() {
+    console.log("entre");
+    this.getDivisions();
+  },
   methods: {
+    getDivisions() {
+      console.log("entreeeeeeeeeeeeeeeeeeee");
+      api
+        .doGet("gps/division/getDivisiones")
+        .then((response) => {
+          this.divisions = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => (this.loading = false));
+    },
     registrar() {
       $("#modalRegistrar").modal("show");
     },
